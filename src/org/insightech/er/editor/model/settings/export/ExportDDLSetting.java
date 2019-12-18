@@ -1,6 +1,7 @@
 package org.insightech.er.editor.model.settings.export;
 
 import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
 
 import org.insightech.er.editor.model.dbexport.ddl.DDLTarget;
@@ -28,6 +29,8 @@ public class ExportDDLSetting implements Serializable, Cloneable {
     private Environment environment;
 
     private Category category;
+    
+    private List<String> outputDababaseIdList;
 
     public String getDdlOutput() {
         return ddlOutput;
@@ -77,7 +80,15 @@ public class ExportDDLSetting implements Serializable, Cloneable {
         this.category = category;
     }
 
-    public String getLineFeed() {
+    public List<String> getOutputDababaseIdList() {
+		return outputDababaseIdList;
+	}
+
+	public void setOutputDababaseIdList(List<String> outputDababaseIdList) {
+		this.outputDababaseIdList = outputDababaseIdList;
+	}
+
+	public String getLineFeed() {
         return lineFeed;
     }
 
@@ -85,7 +96,7 @@ public class ExportDDLSetting implements Serializable, Cloneable {
         this.lineFeed = lineFeed;
     }
 
-    @Override
+	@Override
     public int hashCode() {
         final int prime = 31;
         int result = 1;

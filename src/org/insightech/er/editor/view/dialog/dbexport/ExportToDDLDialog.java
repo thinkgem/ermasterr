@@ -2,6 +2,7 @@ package org.insightech.er.editor.view.dialog.dbexport;
 
 import java.io.File;
 import java.nio.charset.Charset;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.jface.dialogs.IDialogConstants;
@@ -12,12 +13,12 @@ import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
-import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import org.insightech.er.ResourceString;
 import org.insightech.er.common.exception.InputException;
 import org.insightech.er.common.widgets.CompositeFactory;
 import org.insightech.er.common.widgets.FileText;
+import org.insightech.er.db.DBManagerFactory;
 import org.insightech.er.editor.model.dbexport.ExportWithProgressManager;
 import org.insightech.er.editor.model.dbexport.ddl.DDLTarget;
 import org.insightech.er.editor.model.dbexport.ddl.ExportToDDLManager;
@@ -40,8 +41,8 @@ public class ExportToDDLDialog extends AbstractExportDialog {
 
     private Combo lineFeedCombo;
 
-    // private Combo categoryCombo;
-    private Label categoryLabel;
+    private Combo categoryCombo;
+//    private Label categoryLabel;
 
     private Button inlineTableComment;
 
@@ -84,6 +85,8 @@ public class ExportToDDLDialog extends AbstractExportDialog {
     private Button commentReplaceLineFeed;
 
     private Text commentReplaceString;
+    
+    private List<Button> outputDababaseList = new ArrayList<>();
 
     /**
      * {@inheritDoc}
@@ -103,19 +106,19 @@ public class ExportToDDLDialog extends AbstractExportDialog {
         lineFeedCombo.add(ExportDDLSetting.CRLF);
         lineFeedCombo.add(ExportDDLSetting.LF);
 
-        CompositeFactory.createLabel(parent, "label.category");
-        categoryLabel = CompositeFactory.createLabelAsValue(parent, "", 2);
-        // this.categoryCombo = CompositeFactory.createReadOnlyCombo(this,
-        // parent,
-        // "label.category", 2, -1);
-        // this.initCategoryCombo(this.categoryCombo);
+//        CompositeFactory.createLabel(parent, "label.category");
+//        categoryLabel = CompositeFactory.createLabelAsValue(parent, "", 2);
+        categoryCombo = CompositeFactory.createReadOnlyCombo(this, parent, "label.category", 2, -1);
+        initCategoryCombo(this.categoryCombo);
 
         createCheckboxComposite(parent);
 
         createCommentComposite(parent);
 
+        createOutputDababaseButton(parent); // ThinkGem
+        
         final Composite checkboxArea = this.createCheckboxArea(parent, false);
-
+        
         createOpenAfterSavedButton(checkboxArea, false, 3);
     }
 
@@ -229,6 +232,34 @@ public class ExportToDDLDialog extends AbstractExportDialog {
         inlineTableComment = CompositeFactory.createCheckbox(this, group, "label.comment.inline.table", false, 4);
         inlineColumnComment = CompositeFactory.createCheckbox(this, group, "label.comment.inline.column", false, 4);
     }
+    
+    // ThinkGem 输出其它数据库类型 按钮创建
+    private void createOutputDababaseButton(final Composite parent){
+    	final GridData gridData = new GridData();
+        gridData.horizontalSpan = 3;
+        gridData.horizontalAlignment = GridData.FILL;
+        gridData.grabExcessHorizontalSpace = true;
+
+        final Composite composite = new Composite(parent, SWT.NONE);
+        composite.setLayoutData(gridData);
+
+        final GridLayout compositeLayout = new GridLayout();
+        compositeLayout.marginWidth = 0;
+        composite.setLayout(compositeLayout);
+
+        final Group group = new Group(composite, SWT.NONE);
+        group.setLayoutData(gridData);
+        group.setText("Batch output database types");
+
+        final GridLayout layout = new GridLayout();
+        layout.numColumns = 4;
+        group.setLayout(layout);
+        
+        List<String> databaseList = DBManagerFactory.getAllDBList();
+        for (String database : databaseList) {
+        	outputDababaseList.add(CompositeFactory.createCheckbox(this, group, database, false));
+		}
+    }
 
     @Override
     protected String getErrorMessage() {
@@ -262,9 +293,8 @@ public class ExportToDDLDialog extends AbstractExportDialog {
 
         outputFileText.setText(FileUtils.getRelativeFilePath(getBaseDir(), outputFile));
 
-        // this.setCategoryComboData(this.categoryCombo,
-        // exportDDLSetting.getCategory());
-        setCategoryData(categoryLabel);
+        this.setCategoryComboData(this.categoryCombo, exportDDLSetting.getCategory());
+//        setCategoryData(categoryLabel);
 
         final DDLTarget ddlTarget = exportDDLSetting.getDdlTarget();
 
@@ -354,9 +384,16 @@ public class ExportToDDLDialog extends AbstractExportDialog {
         exportDDLSetting.setDdlOutput(saveFilePath);
         exportDDLSetting.setOpenAfterSaved(openAfterSavedButton.getSelection());
 
-        // exportDDLSetting.setCategory(this
-        // .getSelectedCategory(this.categoryCombo));
-        exportDDLSetting.setCategory(diagram.getCurrentCategory());
+        exportDDLSetting.setCategory(this.getSelectedCategory(this.categoryCombo));
+        //exportDDLSetting.setCategory(diagram.getCurrentCategory());
+        
+        List<String> outputDababaseIdList = new ArrayList<>();
+        for (Button button : outputDababaseList) {
+        	if (button.getSelection()){
+        		outputDababaseIdList.add(button.getText());
+        	}
+		}
+        exportDDLSetting.setOutputDababaseIdList(outputDababaseIdList);
 
         final int index = environmentCombo.getSelectionIndex();
         final Environment environment = settings.getEnvironmentSetting().getEnvironments().get(index);
