@@ -1,4 +1,5 @@
-# ermasterr
+# ERMaster
+
 A fork of ERMaster. Faster, Better, VCS-friendly.
 
 Original version is http://ermaster.sourceforge.net  
@@ -6,13 +7,6 @@ Original version is http://ermaster.sourceforge.net
 > It runs as Eclipse plug-in.  
 > It can be done graphically to making ER diagram, printing ER diagram, exporting the DDL from ER diagram, etc. .  
 > Moreover, importing from DB, management of the group, and the historical management, etc. are supported.  
-
-
-# Install
-
-Help -> Install New Software -> 
-
-Update Site: http://thinkgem.gitee.io/ermasterr
 
 # Install
 
