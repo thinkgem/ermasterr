@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ermasterr.features_1.0.0.202002061326.jar" id="ermasterr.features" version="1.0.0.202002061326">
+      <category name="ermaster"/>
+   </feature>
+   <category-def name="ermaster" label="ERMaster"/>
+</site>
