@@ -7,13 +7,25 @@ Original version is http://ermaster.sourceforge.net
 > It can be done graphically to making ER diagram, printing ER diagram, exporting the DDL from ER diagram, etc. .  
 > Moreover, importing from DB, management of the group, and the historical management, etc. are supported.  
 
+
 # Install
+
+Help -> Install New Software -> 
+
+Update Site: http://thinkgem.gitee.io/ermasterr
+
+# Install
+
 1. Install Eclipse  
 Package: `Eclipse IDE for Java Developers`
+
 2. Install PDE plug-in  
 Plug-in name: `Eclipse PDE Plug-in Developer Resources`
+
 3. Install ermasterr  
-Copy the contents of the [dropins folder](https://github.com/roundrop/ermasterr/tree/master/dropins/ermasterr/eclipse/plugins) to the dropins folder located in the root of your Eclipse installation.
+Update Site: `http://thinkgem.gitee.io/ermasterr`
+or
+Copy the contents of the [dropins folder](https://gitee.com/thinkgem/ermasterr/tree/master/dropins/ermasterr/eclipse/plugins) to the dropins folder located in the root of your Eclipse installation.
 
 Directory tree example:
 
