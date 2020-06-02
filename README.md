@@ -17,7 +17,7 @@ Package: `Eclipse IDE for Java Developers`
 Plug-in name: `Eclipse PDE Plug-in Developer Resources`
 
 3. Install ermasterr  
-Update Site: `http://thinkgem.gitee.io/ermasterr`
+Update Site: `https://thinkgem.github.io/ermasterr/updatesite`
 or
 Copy the contents of the [dropins folder](https://gitee.com/thinkgem/ermasterr/tree/master/dropins/ermasterr/eclipse/plugins) to the dropins folder located in the root of your Eclipse installation.
 
