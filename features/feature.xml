@@ -2,7 +2,7 @@
 <feature
       id="ermasterr.features"
       label="ERMaster Features"
-      version="1.1.14.qualifier">
+      version="1.1.15.qualifier">
 
    <description url="http://jeesite.com">
       ER Master 是一个用于设计ER模型图的Eclipse插件。提供的功能包括：从数据库导入关系生成ER图，导出设计图，导出DDL数据定义语句等。目前完整支持的数据库包括 MySQL、PostgreSQL、Oracle、SQLServer、DB2等。

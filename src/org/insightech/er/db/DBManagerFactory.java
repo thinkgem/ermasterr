@@ -25,18 +25,21 @@ public class DBManagerFactory {
     private static final List<String> DB_ID_LIST = new ArrayList<String>();
 
     static {
-        new StandardSQLDBManager();
-        new AccessDBManager();
-        new DB2DBManager();
-        new H2DBManager();
-        new HSQLDBDBManager();
         new MySQLDBManager();
         new OracleDBManager();
-        new PostgresDBManager();
-        new SQLiteDBManager();
-		new SqlServerDBManager();
 		new SqlServer2008DBManager();
+        new PostgresDBManager();
+        
+        new DB2DBManager();
+        new H2DBManager();
+        
+        new AccessDBManager();
+        new HSQLDBDBManager();
+        new SQLiteDBManager();
 		new InformixDBManager();
+		new SqlServerDBManager();
+		
+        new StandardSQLDBManager();
 	}
 
     static void addDB(final DBManager manager) {
