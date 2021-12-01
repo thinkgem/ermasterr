@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ermasterr.features_1.1.14.202002061339.jar" id="ermasterr.features" version="1.1.14.202002061339">
-      <category name="ermaster"/>
-   </feature>
-   <feature url="features/ermasterr.features_1.1.15.202112012121.jar" id="ermasterr.features" version="1.1.15.202112012121">
+   <feature url="features/ermasterr.features_1.1.15.202112012130.jar" id="ermasterr.features" version="1.1.15.202112012130">
       <category name="ermaster"/>
    </feature>
    <category-def name="ermaster" label="ERMaster"/>

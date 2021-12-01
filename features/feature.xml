@@ -5,9 +5,9 @@
       version="1.1.15.qualifier">
 
    <description url="http://jeesite.com">
-      ER Master 是一个用于设计ER模型图的Eclipse插件。提供的功能包括：从数据库导入关系生成ER图，导出设计图，导出DDL数据定义语句等。目前完整支持的数据库包括 MySQL、PostgreSQL、Oracle、SQLServer、DB2等。
-
-http://https://gitee.com/thinkgem/ermasterr
+      ER Master 是一个用于设计ER模型图的Eclipse插件。提供的功能包括：从数据库导入关系生成ER图，导出设计图，导出DDL数据定义语句等。目前完整支持的数据库包括
+MySQL、PostgreSQL、Oracle、SQLServer、DB2等。
+https://gitee.com/thinkgem/ermasterr
    </description>
 
    <copyright url="http://jeesite.com">
