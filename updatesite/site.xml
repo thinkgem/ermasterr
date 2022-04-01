@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ermasterr.features_1.1.15.202112012130.jar" id="ermasterr.features" version="1.1.15.202112012130">
+   <description name="ermasterr" url="https://gitee.com/thinkgem/ermasterr">
+      ER Master 是一个用于设计ER模型图的Eclipse插件。提供的功能包括：从数据库导入关系生成ER图，导出设计图，导出DDL数据定义语句等。目前完整支持的数据库包括 MySQL、PostgreSQL、Oracle、SQLServer、DB2等。
+   </description>
+   <feature url="features/org.insightech.er_1.1.16.jar" id="org.insightech.er" version="1.1.16">
       <category name="ermaster"/>
    </feature>
    <category-def name="ermaster" label="ERMaster"/>

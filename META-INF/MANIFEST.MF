@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ermasterr
-Bundle-SymbolicName: org.insightech.er; singleton:=true
-Bundle-Version: 1.1.15
+Bundle-SymbolicName: org.insightech.er;singleton:=true
+Bundle-Version: 1.1.16
 Bundle-Activator: org.insightech.er.ERDiagramActivator
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
@@ -28,7 +28,7 @@ Bundle-ClassPath: .,
  images/
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Eclipse-LazyStart: true
-Bundle-Vendor: Insightech.org
+Bundle-Vendor: jeesite.com
 Export-Package: org.insightech.er,
  org.insightech.er.common.dialog,
  org.insightech.er.common.exception,

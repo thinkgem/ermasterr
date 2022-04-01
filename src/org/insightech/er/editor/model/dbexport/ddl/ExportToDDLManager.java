@@ -9,6 +9,8 @@ import java.util.List;
 
 import org.insightech.er.db.DBManager;
 import org.insightech.er.db.DBManagerFactory;
+import org.insightech.er.db.impl.sqlserver.SqlServerDBManager;
+import org.insightech.er.db.impl.sqlserver2008.SqlServer2008DBManager;
 import org.insightech.er.editor.controller.command.settings.ChangeSettingsCommand;
 import org.insightech.er.editor.model.dbexport.AbstractExportManager;
 import org.insightech.er.editor.model.progress_monitor.ProgressMonitor;
@@ -45,8 +47,10 @@ public class ExportToDDLManager extends AbstractExportManager {
 					settings.setDatabase(dbManager.getId());
 					new ChangeSettingsCommand(diagram, settings, false).execute();
         			// 生成 DDL 文件
-					String db = dbManager.getId().toLowerCase()
-							.replaceAll("sqlserver", "mssql").replaceAll(" ", "");
+					String db = dbManager.getId()
+							.replaceAll(SqlServer2008DBManager.ID, "mssql")
+							.replaceAll(SqlServerDBManager.ID, "mssql2000")
+							.toLowerCase().replaceAll(" ", "");
 					StringBuilder fileName = new StringBuilder(exportDDLSetting.getDdlOutput());
 					int lastIndexOf = fileName.lastIndexOf(File.separator);
 					if (lastIndexOf != -1){

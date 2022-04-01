@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
-      id="ermasterr.features"
+      id="org.insightech.er"
       label="ERMaster Features"
-      version="1.1.15.qualifier">
+      version="1.1.16"
+      provider-name="jeesite.com">
 
    <description url="http://jeesite.com">
-      ER Master 是一个用于设计ER模型图的Eclipse插件。提供的功能包括：从数据库导入关系生成ER图，导出设计图，导出DDL数据定义语句等。目前完整支持的数据库包括
-MySQL、PostgreSQL、Oracle、SQLServer、DB2等。
-https://gitee.com/thinkgem/ermasterr
+      ER Master是一个用于设计ER模型图的Eclipse插件。提供的功能包括：从数据库导入关系生成ER图，导出设计图，导出DDL数据定义语句等。目前完整支持的数据库包括MySQL、Oracle、SQLServer、PostgreSQL、DB2等。
    </description>
 
    <copyright url="http://jeesite.com">
@@ -17,6 +16,10 @@ https://gitee.com/thinkgem/ermasterr
    <license url="http://jeesite.com">
       Apache License V2.0
    </license>
+
+   <url>
+      <update label="ermasterr" url="https://thinkgem.gitee.io/ermasterr/updatesite"/>
+   </url>
 
    <plugin
          id="org.insightech.er"
