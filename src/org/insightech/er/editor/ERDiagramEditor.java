@@ -209,8 +209,8 @@ public class ERDiagramEditor extends GraphicalEditorWithPalette {
         initDragAndDrop(viewer);
 
         viewer.setProperty(MouseWheelHandler.KeyGenerator.getKey(SWT.MOD1), MouseWheelZoomHandler.SINGLETON);
-        viewer.setProperty(SnapToGrid.PROPERTY_GRID_ENABLED, true);
-        viewer.setProperty(SnapToGrid.PROPERTY_GRID_VISIBLE, true);
+        viewer.setProperty(SnapToGrid.PROPERTY_GRID_ENABLED, false);
+        viewer.setProperty(SnapToGrid.PROPERTY_GRID_VISIBLE, false);
         viewer.setProperty(SnapToGeometry.PROPERTY_SNAP_ENABLED, true);
 
         final MenuManager menuMgr = new ERDiagramPopupMenuManager(getActionRegistry(), diagram);
@@ -330,8 +330,8 @@ public class ERDiagramEditor extends GraphicalEditorWithPalette {
         addKeyHandler(zoomInAction);
         addKeyHandler(zoomOutAction);
 
-        final IFigure gridLayer = rootEditPart.getLayer(LayerConstants.GRID_LAYER);
-        gridLayer.setForegroundColor(Resources.GRID_COLOR);
+//        final IFigure gridLayer = rootEditPart.getLayer(LayerConstants.GRID_LAYER);
+//        gridLayer.setForegroundColor(Resources.GRID_COLOR);
 
         IAction action = new ToggleGridAction(viewer);
         getActionRegistry().registerAction(action);

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ermasterr
 Bundle-SymbolicName: org.insightech.er;singleton:=true
-Bundle-Version: 1.1.16
+Bundle-Version: 1.1.17
 Bundle-Activator: org.insightech.er.ERDiagramActivator
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.ui,
