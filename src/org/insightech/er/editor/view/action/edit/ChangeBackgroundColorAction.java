@@ -66,9 +66,10 @@ public class ChangeBackgroundColorAction extends SelectionAction {
         imageData.transparentPixel = imageData.palette.getPixel(new RGB(255, 255, 255));
         imageData.palette.colors[blackPixel] = rgb;
 
-        // if (this.image != null) {
-        // this.image.dispose();
-        // }
+        if (this.image != null) {
+            this.image.dispose();
+        }
+        
         image = new Image(Display.getCurrent(), imageData);
 
         final ImageDescriptor descriptor = ImageDescriptor.createFromImage(image);

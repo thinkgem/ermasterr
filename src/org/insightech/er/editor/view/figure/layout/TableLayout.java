@@ -205,8 +205,8 @@ public class TableLayout extends AbstractHintLayout {
         separator.setLineWidth(separatorWidth);
         separator.addPoint(new Point(rect.x, rect.y));
         separator.addPoint(new Point(rect.x, rect.y + rect.height));
-
-        figure.getChildren().add(separator);
+        
+        ((List)figure.getChildren()).add(separator);
         separator.setParent(figure);
 
         separators.add(separator);
@@ -218,7 +218,8 @@ public class TableLayout extends AbstractHintLayout {
         separator.setLineWidth(separatorWidth);
         separator.addPoint(new Point(rect.x, rect.y));
         separator.addPoint(new Point(rect.x + rect.width, rect.y));
-        figure.getChildren().add(separator);
+
+        ((List)figure.getChildren()).add(separator);
         separator.setParent(figure);
 
         separators.add(separator);

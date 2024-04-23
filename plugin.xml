@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE configuration>
 <?eclipse version="3.2"?>
 <plugin>
    <extension-point id="popupMenus" name="PopupMenu" schema="schema/PopupMenu.exsd"/>
@@ -107,7 +106,5 @@
 			eclipseRuntime="true" />
 			
 	</extension>
-	
-	
 	
 </plugin>
