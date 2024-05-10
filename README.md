@@ -23,10 +23,6 @@ Plug-in name: `Eclipse PDE Plug-in Developer Resources`
  
 Update Site:
 
-`https://thinkgem.gitee.io/ermasterr/updatesite`
-
-or
-
 `https://thinkgem.github.io/ermasterr/updatesite`
 
 or
