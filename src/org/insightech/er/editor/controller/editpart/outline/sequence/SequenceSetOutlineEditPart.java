@@ -29,14 +29,12 @@ public class SequenceSetOutlineEditPart extends AbstractOutlineEditPart {
      */
     @Override
     protected void refreshOutlineVisuals() {
-        if (!DBManagerFactory.getDBManager(getDiagram()).isSupported(DBManager.SUPPORT_SEQUENCE)) {
-            ((TreeItem) getWidget()).setForeground(ColorConstants.lightGray);
-
-        } else {
-            ((TreeItem) getWidget()).setForeground(ColorConstants.black);
-
-        }
-
+//        if (!DBManagerFactory.getDBManager(getDiagram()).isSupported(DBManager.SUPPORT_SEQUENCE)) {
+//            ((TreeItem) getWidget()).setForeground(ColorConstants.lightGray);
+//
+//        } else {
+//            ((TreeItem) getWidget()).setForeground(ColorConstants.black);
+//        }
         setWidgetText(ResourceString.getResourceString("label.sequence") + " (" + getModelChildren().size() + ")");
         setWidgetImage(ERDiagramActivator.getImage(ImageKey.DICTIONARY));
     }

@@ -31,7 +31,7 @@ or
 
 or
 
-Copy the contents of the [dropins folder](https://gitee.com/thinkgem/ermasterr/tree/master/dropins/ermasterr/eclipse/plugins) to the dropins folder located in the root of your Eclipse installation.
+Copy the contents of the [org.insightech.er_x.y.z.jar](https://gitee.com/thinkgem/ermasterr/tree/master/updatesite/plugins) latest version to the dropins folder located in the root of your Eclipse installation.
 
 Directory tree example:
 
