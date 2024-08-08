@@ -88,9 +88,9 @@ public class Settings implements Serializable, Cloneable, TablePropertiesHolder 
         notationExpandGroup = true;
 
         tableStyle = null;
-        viewMode = VIEW_MODE_PHYSICAL;
-        outlineViewMode = VIEW_MODE_PHYSICAL;
-        viewOrderBy = VIEW_MODE_PHYSICAL;
+        viewMode = VIEW_MODE_BOTH;
+        outlineViewMode = VIEW_MODE_BOTH;
+		viewOrderBy = VIEW_MODE_BOTH;
 
         modelProperties = new ModelProperties();
         categorySetting = new CategorySetting();
@@ -179,7 +179,7 @@ public class Settings implements Serializable, Cloneable, TablePropertiesHolder 
         return viewOrderBy;
     }
 
-    public void setViewOrderBy(final int viewOrderBy) {
+	public void setViewOrderBy(final int viewOrderBy) {
         this.viewOrderBy = viewOrderBy;
     }
 

@@ -31,6 +31,7 @@ public class SelectImportedObjectFromDBDialog extends AbstractSelectImportedObje
         clearDiagramButton.setSelection(true);
 
         useCommentAsLogicalNameButton = CompositeFactory.createCheckbox(this, group, "label.use.comment.as.logical.name", false);
+        useCommentAsLogicalNameButton.setSelection(true);
         super.initializeOptionGroup(group);
     }
 
