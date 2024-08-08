@@ -62,6 +62,15 @@ your_eclipse_install_dir/
 
 * ermasterr can write git-mergable erdiagram data as far as possible. (https://sourceforge.net/p/ermaster/feature-requests/104/)
 
+# Release
+
+1. Open file `/META-INF/MAINIFEST.MF` Mobify Version.
+2. File -> Export -> Plug-in Development -> Deployable plug-ins and fragments -> Select org.insightech.er.
+3. Open file `/features/feature.xml` Mobify Version.
+4. File -> Export -> Plug-in Development -> Deployable features.
+5. Open `/updatesite/site.xml` -> Add Feature new version and right-click Remove old version
+
+
 # License
 
 Apache License V2.0

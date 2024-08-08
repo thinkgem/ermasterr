@@ -2,11 +2,19 @@
 <feature
       id="org.insightech.er"
       label="ERMaster Features"
-      version="1.1.18"
+      version="1.2.0"
       provider-name="jeesite.com">
 
    <description url="http://jeesite.com">
       ER Master是一个用于设计ER模型图的Eclipse插件。提供的功能包括：从数据库导入关系生成ER图，导出设计图，导出DDL数据定义语句等。目前完整支持的数据库包括MySQL、Oracle、SQLServer、PostgreSQL、DB2等。
+
+更新日志：（ by jeesite.com ）
+
+v1.1.15 增加批量生成不同数据库的 DLL 脚本，极大的方便了通过标准库一次建模，导出各种数据库类型的 DDL，自动进行数据类型转换；
+v1.1.16 调整批量生成 DLL 排序，常见库靠前排放，方便选择；
+v1.1.17 支持 jdk17；支持黑暗模式；支持新版本 Eclipse；
+v1.1.18 H2 库增加 COMMENT 备注导出；
+v1.2.0 标准库增加 longtext 类型；支持 MySQL 8.x 驱动导入表；默认显示逻辑字段名；
    </description>
 
    <copyright url="http://jeesite.com">
