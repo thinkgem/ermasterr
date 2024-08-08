@@ -37,7 +37,8 @@ public class MySQLDBManager extends DBManagerBase {
      */
     @Override
     public String getDriverClassName() {
-        return "com.mysql.jdbc.Driver";
+//        return "com.mysql.jdbc.Driver";
+    	return "com.mysql.cj.jdbc.Driver";
     }
 
     /**

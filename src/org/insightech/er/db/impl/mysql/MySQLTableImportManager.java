@@ -65,29 +65,29 @@ public class MySQLTableImportManager extends ImportFromDBManagerEclipseBase {
 
     @Override
     protected void cacheOtherColumnData(final String tableName, final String schema, final ColumnData columnData) throws SQLException {
-        final String tableNameWithSchema = dbSetting.getTableNameWithSchema(tableName, schema);
-
-        final SqlType sqlType = SqlType.valueOfId(columnData.type);
-
-        if (sqlType != null && sqlType.doesNeedArgs()) {
-            final String restrictType = getRestrictType(tableNameWithSchema, columnData);
-
-            final Pattern p = Pattern.compile(columnData.type.toLowerCase() + "\\((.*)\\)");
-            final Matcher m = p.matcher(restrictType);
-
-            if (m.matches()) {
-                columnData.enumData = m.group(1);
-            }
-
-        } else if (columnData.type.equals("year")) {
-            final String restrictType = getRestrictType(tableNameWithSchema, columnData);
-            columnData.type = restrictType;
-
-        } else if (columnData.type.toUpperCase().indexOf(" UNSIGNED") != -1) {
-            final String restrictType = getRestrictType(tableNameWithSchema, columnData);
-            columnData.type = restrictType;
-
-        }
+//        final String tableNameWithSchema = dbSetting.getTableNameWithSchema(tableName, schema);
+//
+//        final SqlType sqlType = SqlType.valueOfId(columnData.type);
+//
+//        if (sqlType != null && sqlType.doesNeedArgs()) {
+//            final String restrictType = getRestrictType(tableNameWithSchema, columnData);
+//
+//            final Pattern p = Pattern.compile(columnData.type.toLowerCase() + "\\((.*)\\)");
+//            final Matcher m = p.matcher(restrictType);
+//
+//            if (m.matches()) {
+//                columnData.enumData = m.group(1);
+//            }
+//
+//        } else if (columnData.type.equals("year")) {
+//            final String restrictType = getRestrictType(tableNameWithSchema, columnData);
+//            columnData.type = restrictType;
+//
+//        } else if (columnData.type.toUpperCase().indexOf(" UNSIGNED") != -1) {
+//            final String restrictType = getRestrictType(tableNameWithSchema, columnData);
+//            columnData.type = restrictType;
+//
+//        }
     }
 
     private String getRestrictType(final String tableNameWithSchema, final ColumnData columnData) throws SQLException {
@@ -162,7 +162,10 @@ public class MySQLTableImportManager extends ImportFromDBManagerEclipseBase {
         PreparedStatement ps = null;
         ResultSet rs = null;
 
-        final String sql = "SELECT T.TABLE_NAME, T.TABLE_COLLATION, C.COLUMN_NAME, " + "C.CHARACTER_SET_NAME, C.COLLATION_NAME, C.COLUMN_TYPE " + "FROM INFORMATION_SCHEMA.TABLES T, INFORMATION_SCHEMA.COLUMNS C " + "WHERE T.TABLE_SCHEMA = ? AND T.TABLE_NAME = C.TABLE_NAME";
+        final String sql = "SELECT T.TABLE_NAME, T.TABLE_COLLATION, C.COLUMN_NAME, "
+        		+ "C.CHARACTER_SET_NAME, C.COLLATION_NAME, C.COLUMN_TYPE "
+        		+ "FROM INFORMATION_SCHEMA.TABLES T, INFORMATION_SCHEMA.COLUMNS C "
+        		+ "WHERE T.TABLE_SCHEMA = ? AND T.TABLE_NAME = C.TABLE_NAME";
 
         try {
             ps = con.prepareStatement(sql);
