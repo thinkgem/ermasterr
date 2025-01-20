@@ -9,7 +9,7 @@ v1.1.17 支持 jdk17；支持黑暗模式；支持新版本 Eclipse；
 v1.1.18 H2 库增加 COMMENT 备注导出；
 v1.2.0 标准库增加 longtext 类型；支持 MySQL 8.x 驱动导入表；默认显示逻辑字段名；
    </description>
-   <feature url="features/org.insightech.er_1.2.0.jar" id="org.insightech.er" version="1.2.0">
+   <feature url="features/org.insightech.er_1.2.1.jar" id="org.insightech.er" version="1.2.1">
       <category name="ERMaster"/>
    </feature>
    <category-def name="ERMaster" label="ERMaster"/>

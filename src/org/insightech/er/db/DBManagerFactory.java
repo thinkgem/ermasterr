@@ -27,7 +27,7 @@ public class DBManagerFactory {
     static {
         new MySQLDBManager();
         new OracleDBManager();
-		new SqlServer2008DBManager();
+		new SqlServerDBManager();
         new PostgresDBManager();
         
         new DB2DBManager();
@@ -37,7 +37,7 @@ public class DBManagerFactory {
         new HSQLDBDBManager();
         new SQLiteDBManager();
 		new InformixDBManager();
-		new SqlServerDBManager();
+		new SqlServer2008DBManager();
 		
         new StandardSQLDBManager();
 	}

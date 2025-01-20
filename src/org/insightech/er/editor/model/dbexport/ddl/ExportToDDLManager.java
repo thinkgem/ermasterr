@@ -48,8 +48,8 @@ public class ExportToDDLManager extends AbstractExportManager {
 					new ChangeSettingsCommand(diagram, settings, false).execute();
         			// 生成 DDL 文件
 					String db = dbManager.getId()
-							.replaceAll(SqlServer2008DBManager.ID, "mssql")
-							.replaceAll(SqlServerDBManager.ID, "mssql2000")
+							.replaceAll(SqlServerDBManager.ID, "mssql")
+							.replaceAll(SqlServer2008DBManager.ID, "mssql2008")
 							.toLowerCase().replaceAll(" ", "");
 					StringBuilder fileName = new StringBuilder(exportDDLSetting.getDdlOutput());
 					int lastIndexOf = fileName.lastIndexOf(File.separator);
