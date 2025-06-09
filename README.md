@@ -66,9 +66,9 @@ your_eclipse_install_dir/
 
 1. Open file `/META-INF/MAINIFEST.MF` Mobify Version.
 2. File -> Export -> Plug-in Development -> Deployable plug-ins and fragments -> Select org.insightech.er.
-3. Open file `/features/feature.xml` Mobify Version.
+3. Open file `/features/feature.xml` Mobify Version and update upgrade info.
 4. File -> Export -> Plug-in Development -> Deployable features.
-5. Open `/updatesite/site.xml` -> Add Feature new version and right-click Remove old version
+5. Open `/updatesite/site.xml` -> Add Feature new version and right-click Remove old version and update upgrade info.
 
 
 # License

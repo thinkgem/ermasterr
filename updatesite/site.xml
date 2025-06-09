@@ -8,8 +8,10 @@ v1.1.16 调整批量生成 DLL 排序，常见库靠前排放，方便选择；
 v1.1.17 支持 jdk17；支持黑暗模式；支持新版本 Eclipse；
 v1.1.18 H2 库增加 COMMENT 备注导出；
 v1.2.0 标准库增加 longtext 类型；支持 MySQL 8.x 驱动导入表；默认显示逻辑字段名；
+v1.2.1 批量导出 DDL 时 SqlServer 和 SqlServer2008 调整顺序；
+v1.3.0 支持eclipse2025；gef3.13以上版本；优化对话框边距；
    </description>
-   <feature url="features/org.insightech.er_1.2.1.jar" id="org.insightech.er" version="1.2.1">
+   <feature url="features/org.insightech.er_1.3.0.jar" id="org.insightech.er" version="1.3.0">
       <category name="ERMaster"/>
    </feature>
    <category-def name="ERMaster" label="ERMaster"/>
