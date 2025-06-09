@@ -1,7 +1,7 @@
 package org.insightech.er.editor.view.action.zoom;
 
+import org.eclipse.draw2d.zoom.ZoomListener;
 import org.eclipse.gef.Disposable;
-import org.eclipse.gef.editparts.ZoomListener;
 import org.eclipse.gef.editparts.ZoomManager;
 import org.eclipse.jface.action.Action;
 import org.insightech.er.ERDiagramActivator;
