@@ -85,7 +85,7 @@ public abstract class AbstractDialog extends Dialog {
         layout.numColumns = 2;
         layout.marginLeft = 20;
         layout.marginRight = 20;
-        layout.marginBottom = 15;
+        layout.marginBottom = 2;
     }
 
     protected int getNumColumns() {

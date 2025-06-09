@@ -20,13 +20,13 @@ public class Resources {
 
     public static final int BUTTON_ADD_REMOVE_WIDTH = 80;
 
-    public static final int DESCRIPTION_WIDTH = 400;
+    public static final int DESCRIPTION_WIDTH = 600;
 
     public static final int INDENT = 20;
 
-    public static final int VERTICAL_SPACING = 15;
+    public static final int VERTICAL_SPACING = 2;
 
-    public static final int MARGIN = 10;
+    public static final int MARGIN = 5;
 
     public static final int MARGIN_TAB = 10;
 
